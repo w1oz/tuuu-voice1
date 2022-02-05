@@ -1,0 +1,17 @@
+[general]
+token = "OTM5MDgwMzQ2MjE2MDUwNzI4.YfzouQ.6P5HT9dg65_t9WhIfRyBYG7mBN8"
+
+[categories]
+    [categories.0]
+    categoryId = "528139357723426818"
+
+    autoText = true
+    autoTextPrefix = "-"
+    autoTextPosition = "bottom"
+
+    autoVoice = true
+    autoVoicePrefix = "Temp"
+    autoVoiceSlots = 99
+    autoVoiceChannelLimit = 20
+    autoVoiceBitrate = 96000
+    autoVoicePermissions = []

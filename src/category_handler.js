@@ -92,8 +92,10 @@ class CategoryHandler {
   }
 
   async updateTextChannelExistence(voiceChannel) {
+
     const textChannelName = this.getTextChannelName(voiceChannel);
-    let textChannel = this.getChannel(this.category.id, "text", textChannelName);
+    
+    let textChannel = this.getChannel(this.category.id, "text", textChannelName.replace('--',''));
 
     if (textChannel == null && voiceChannel.members.size > 0) {
       const channelProps = {
@@ -207,6 +209,7 @@ class CategoryHandler {
   }
 
   getChannel(categoryId, type, name) {
+ //   console.log(this.client.channels.cache)
     return this.client.channels.cache
       .filter(channel => channel.type === type)
       .filter(channel => channel.parentID === categoryId)
